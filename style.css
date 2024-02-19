@@ -1,11 +1,12 @@
 body{
-color:#fff
-font-size:1.2
-font-family:Verdana
-letter-spacing:.1em;
+color:#ffffff;
+background-color: pink;
+font-size:1.2;
+font-family:Verdana;
+letter-spacing:.1 em;
 line-height:1.5;
 text-align:center;
 overflow-y:scroll;
 overflow-wrap:break-word;
-word-wrap:break-word
+word-wrap:break-word;
 }
