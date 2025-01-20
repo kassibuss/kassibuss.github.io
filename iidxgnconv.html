@@ -7,17 +7,7 @@
     <meta name=description content="IIDX GN to BMS GN converter">
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script> 
-    $('#iidxgn').keyup(function(){
-    var iidxgn;
-    iidxgn = parseFloat($('#iidxgn').val());
-    var bmsgn = (iidxgn * 5 / 3) ;
-    $('#bmsgn').val(Math.round(bmsgn));
-    });
-    </script>   
-
+    
     <style>
 
         body {
@@ -51,7 +41,6 @@
         }
     
     </style>
-
 </head>
 
 <body>
@@ -60,14 +49,24 @@
     <h3>Based on info from <a href="https://github.com/wcko87/beatoraja-english-guide/wiki/Scroll-Speed-and-Green-Number">Wcko87's guide for BMS</a></h3>
     <p><b>Do note that the result is rounded up to the nearest number.</b></p>
     <div class="calc">
-    <p>Your IIDX GN: <input id="iidxgn" type="text" value="" autocomplete="off" type="number" maxlength="3" size="3"></p>
+    <p>Your IIDX GN: <input id="iidxgn" type="text" value="" autocomplete="off" maxlength="3" size="3"></p>
     </div>
     <div class="bms">
-        <p>Your green number in BMS would be: <input id="bmsgn" type="text" readonly="readonly" autocomplete="off" type="number" size="3"></p>
+        <p>Your green number in BMS would be: <input id="bmsgn" type="text" readonly="readonly" autocomplete="off" size="3"></p>
     </div>
     <p>
         The beatoraja green number uses different units from the green number in IIDX.  <br> The beatoraja green number indicates the number of milliseconds a note is visible for, while the IIDX green number indicates the number of frames a note is visible for.
     </p>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <script> 
+    $('#iidxgn').keyup(function(){
+    var iidxgn;
+    iidxgn = parseFloat($('#iidxgn').val());
+    var bmsgn = (iidxgn * 5 / 3) ;
+    $('#bmsgn').val(Math.round(bmsgn));
+     });
+    </script>  
 </body>
 </html>
 
