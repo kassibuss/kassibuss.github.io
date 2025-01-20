@@ -1,34 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>IIDX GN to BMS GN conventer</title>
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Hind+Siliguri">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Average+Sans">
     <meta name=description content="IIDX GN to BMS GN converter">
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>
-        $('#iidxgn').keyup(function(){
-            var iidxgn;
-            iidxgn = parseFloat($('#iidxgn').val());
-            var bmsgn = (iidxgn * 5 / 3) ;
-            $('#bmsgn').val(Math.round(bmsgn));
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script> 
+    $('#iidxgn').keyup(function(){
+    var iidxgn;
+    iidxgn = parseFloat($('#iidxgn').val());
+    var bmsgn = (iidxgn * 5 / 3) ;
+    $('#bmsgn').val(Math.round(bmsgn));
+    });
+    </script>   
+
+    <style>
+
+        body {
+            background-color: #FCFBF4;
+        }
     
+        h2, h3, h4, p, a, .bms{
+            text-align: center;
+            text-decoration: none;
+            
+        }
     
-        });
-    </script>
+        h2,h3{
+            font-family: "Average sans", sans-serif;
+        }
+    
+        p{
+            font-family: "Hind Siliguri", sans-serif;
+        }
+    
+        a:visited{
+            text-decoration: none;
+        }
+    
+        input{
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom-color: black;
+            background: none;
+        }
+    
+    </style>
+
 </head>
+
 <body>
   
     <h2>IIDX GN to BMS GN calculator</h2>
     <h3>Based on info from <a href="https://github.com/wcko87/beatoraja-english-guide/wiki/Scroll-Speed-and-Green-Number">Wcko87's guide for BMS</a></h3>
     <p><b>Do note that the result is rounded up to the nearest number.</b></p>
     <div class="calc">
-    <p>Your IIDX GN: <input id="iidxgn" type="text" value="" autocomplete="off" type="number" maxlength="3" size="3"/></p>
+    <p>Your IIDX GN: <input id="iidxgn" type="text" value="" autocomplete="off" type="number" maxlength="3" size="3"></p>
     </div>
     <div class="bms">
-        <p>Your green number in BMS would be: <input id="bmsgn" type="text" readonly="readonly" autocomplete="off" type="number" size="3"/></p>
+        <p>Your green number in BMS would be: <input id="bmsgn" type="text" readonly="readonly" autocomplete="off" type="number" size="3"></p>
     </div>
     <p>
         The beatoraja green number uses different units from the green number in IIDX.  <br> The beatoraja green number indicates the number of milliseconds a note is visible for, while the IIDX green number indicates the number of frames a note is visible for.
@@ -36,37 +71,3 @@
 </body>
 </html>
 
-<style>
-
-    body {
-        background-color: #FCFBF4;
-    }
-
-    h2, h3, h4, p, a, .bms{
-        text-align: center;
-        text-decoration: none;
-        
-    }
-
-    h2,h3{
-        font-family: "Average sans", sans-serif;
-    }
-
-    p{
-        font-family: "Hind Siliguri", sans-serif;
-    }
-
-    a:visited{
-        text-decoration: none;
-        text-decoration-color: none;
-    }
-
-    input{
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom-color: black;
-        background: none;
-    }
-
-</style>
